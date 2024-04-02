@@ -1,12 +1,11 @@
 {
-    "id": "sqreamd",
+    "id": "sqreamdb",
     "version": "0.1.0",
     "meta": {
-        "label": "Sqreamd",
-        "description": "Bulk load data stored in S3 to a sqreamd table",
+        "label": "Sqreamdb",
+        "description": "Bulk load data stored in S3 to a sqreamdb table",
         "author": "Dataiku (Thomas Cabrol)",
         "icon": "icon-cloud",
-        "licenseInfo": "Apache Software License",
         "tags": ["Connector", "Cloud"]
     }
 }
