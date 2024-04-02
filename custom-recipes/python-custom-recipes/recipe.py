@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 import sys
 import json
@@ -143,6 +144,7 @@ fieldSetterMap = {
     'date': 'text',
     'string': 'text',
 }
+
 if file_formate == 'json' or 'avro':
     print("[+] Create a foreign table ...")
     q = f"""CREATE OR REPLACE FOREIGN TABLE f_{output_table} wrapper {file_formate}_fdw options 
@@ -186,6 +188,6 @@ else:
     cur.execute(q)
 
     # Write recipe outputs
-    # out.write_schema(ds.read_schema())
+    out.write_schema(ds.read_schema())
     print("[+] Loading Done")
     print(ds.read_schema())
