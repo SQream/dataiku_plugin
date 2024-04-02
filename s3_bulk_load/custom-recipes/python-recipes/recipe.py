@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 import sys
 import json
@@ -86,24 +85,19 @@ jdbc_url = config["info"]["connectionParams"]["jdbcurl"]
 
 
 parsed_url = urlparse(jdbc_url)
-# Get the path component
 path_components = parsed_url.path
 # Split the path component by '/' and ';' to extract parameters
 parameters = [component.split('=', 1) for component in path_components.split(';') if '=' in component]
 # Convert the parameters into a dictionary
 parameters_dict = {param[0]: param[1] if len(param) > 1 else None for param in parameters}
 # Extract the value between '/' and ';' as 'database' key
-
 url_parts = jdbc_url.split('//')
 host_port_parts = url_parts[1].split("/")
 host = host_port_parts[0].split(":")[0]
 port = int(host_port_parts[0].split(":")[1])
-
 # Extract the database name
 database_name = host_port_parts[1].split(";")[0]
-# Extract the database name
 
-# Add 'database' key and its value to the parameters_dict
 parameters_dict['database'] = database_name
 parameters_dict['host'] = host
 parameters_dict['port'] = port
@@ -168,7 +162,6 @@ else:
     schema_out = ", ".join(schema)
 
     print(f"table ddl {schema_out}")
-    # Actual sqreamd bulkload
     print("[+] Create target table ...")
     q = f""" CREATE OR REPLACE TABLE {output_table} ({schema_out})"""
     print(f"create statment -->> {q}")
