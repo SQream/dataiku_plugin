@@ -5,7 +5,7 @@ The purpose of this Plugin is to speed up data transfer from s3 to sqreamd.
 
 How It Works:
 
-Sqreamd and S3 are deeply integrated solutions. If you already have an AWS account and use S3 buckets for storing and managing your data, you can make use of your existing buckets and folder paths for bulk loading into Snowflake. This DSS Plugin allows you to load the data from S3 to Snowflake directly, without any external actions - and ensuring fast data transfers.
+Sqreamd and S3 are deeply integrated solutions. If you already have an AWS account and use S3 buckets for storing and managing your data, you can make use of your existing buckets and folder paths for bulk loading into sqreamdb. This DSS Plugin allows you to load the data from S3 to sqreamdb directly, without any external actions - and ensures fast data transfers.
 
 
 A typical usage scenario would be:
@@ -13,7 +13,7 @@ A typical usage scenario would be:
 read some input data from Amazon S3 and load it to Sqreamdb table by using this DSS Plugin.
  
 
-The Plugin allows DSS to create new sqreamdb table and to perform a fast bulk-load from S3 data.
+The Plugin allows DSS to create a new sqreamdb table and to perform a fast bulk load from S3 data.
 
 Prerequisites
 Sqreamdb (JDBC) Connection set up in DSS
@@ -22,7 +22,7 @@ the corresponding AWS credentials for the S3 buckets (AWS Access Key and AWS Sec
 The Plugin comes with a code environment that installs the Sqreamdb Python Connector(pysqream) and is automatically installed with the Plugin. 
 
 
-The Plugin has been tested with Python 3.9 and requires a valid Python 3.9 installation on the machine (the Plugin code environment is restricted to Python 3.6).
+The Plugin has been tested with Python 3.9 and requires a valid Python 3.9 installation on the machine (the Plugin code environment is restricted to Python 3.9).
 
 # How To Use
 In order to use the Plugin:
