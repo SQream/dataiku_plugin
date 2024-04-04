@@ -45,6 +45,7 @@ When DSS Variables are used, DSS will look for the following inputs:
 Finally, run the Plugin Recipe and browse the output Dataset. A new table should have been created in Sqreamdb.
 
 Error Handling
+
 If the Plugin job fails, you can look at the error logs for the cause of the problem. Depending on the error message, the errors might be due to:
 
 Missing Key_ID and/or Secret_Key: “KeyError: 'AWS_KEY_ID' (or 'AWS_SECRET_KEY)”
