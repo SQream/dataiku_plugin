@@ -1,9 +1,7 @@
 # Plugin information
+ 
 
-Sqreamdb is a data warehouse 
-
-
-The purpose of this Plugin is to leverage these integrations to speed up data transfers and processing.
+The purpose of this Plugin is to speed up data transfer from s3 to sqreamd.
 
 How It Works:
 
