@@ -16,10 +16,11 @@ read some input data from Amazon S3 and load it to Sqreamdb table by using this 
 The Plugin allows DSS to create a new sqreamdb table and to perform a fast bulk load from S3 data.
 
 # Prerequisites
-Sqreamdb (JDBC) Connection set up in DSS
-Amazon S3 Connection set up in DSS
-the corresponding AWS credentials for the S3 buckets (AWS Access Key and AWS Secret Key)
-The Plugin comes with a code environment that installs the Sqreamdb Python Connector(pysqream) and is automatically installed with the Plugin. 
+
+1. Sqreamdb (JDBC) Connection set up in DSS
+2. Amazon S3 Connection set up in DSS
+3. the corresponding AWS credentials for the S3 buckets (AWS Access Key and AWS Secret Key)
+4. The Plugin comes with a code environment that installs the Sqreamdb Python Connector(pysqream) and is automatically installed with the Plugin. 
 
 
 The Plugin has been tested with Python 3.9 and requires a valid Python 3.9 installation on the machine (the Plugin code environment is restricted to Python 3.9).
