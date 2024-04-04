@@ -15,7 +15,7 @@ read some input data from Amazon S3 and load it to Sqreamdb table by using this 
 
 The Plugin allows DSS to create a new sqreamdb table and to perform a fast bulk load from S3 data.
 
-Prerequisites
+# Prerequisites
 Sqreamdb (JDBC) Connection set up in DSS
 Amazon S3 Connection set up in DSS
 the corresponding AWS credentials for the S3 buckets (AWS Access Key and AWS Secret Key)
@@ -44,7 +44,7 @@ When DSS Variables are used, DSS will look for the following inputs:
 }
 Finally, run the Plugin Recipe and browse the output Dataset. A new table should have been created in Sqreamdb.
 
-Error Handling
+# Error Handling
 
 If the Plugin job fails, you can look at the error logs for the cause of the problem. Depending on the error message, the errors might be due to:
 
