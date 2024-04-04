@@ -3,7 +3,7 @@
 
 The purpose of this Plugin is to speed up data transfer from s3 to sqreamd.
 
-How It Works:
+# How It Works:
 
 Sqreamd and S3 are deeply integrated solutions. If you already have an AWS account and use S3 buckets for storing and managing your data, you can make use of your existing buckets and folder paths for bulk loading into sqreamdb. This DSS Plugin allows you to load the data from S3 to sqreamdb directly, without any external actions - and ensures fast data transfers.
 
