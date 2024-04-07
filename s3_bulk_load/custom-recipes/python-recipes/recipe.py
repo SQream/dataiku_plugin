@@ -164,7 +164,7 @@ else:
 
     print(f"table ddl {schema_out}")
     print("[+] Create target table ...")
-    q = f""" CREATE OR REPLACE TABLE {output_table} ({schema_out})"""
+    q = f""" CREATE OR REPLACE TABLE "{output_table}" ({schema_out})"""
     print(f"create statment -->> {q}")
     cur.execute(q)
 
