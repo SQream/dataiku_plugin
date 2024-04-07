@@ -139,7 +139,9 @@ fieldSetterMap = {
     'string': 'text',
 }
 
-if file_formate == 'json' or 'avro':
+
+if file_formate == 'json' or file_formate == 'avro':
+
     print("[+] Create a foreign table ...")
     q = f"""CREATE OR REPLACE FOREIGN TABLE f_{output_table} wrapper {file_formate}_fdw options 
         (location = '{full_path}', AWS_ID = '{AWS_ACCESS_KEY}', AWS_SECRET = '{AWS_SECRET_KEY}' )"""
@@ -147,7 +149,6 @@ if file_formate == 'json' or 'avro':
     q = f""" CREATE OR REPLACE TABLE "{output_table}" as select * from f_{output_table}"""
     print(f"create statment -->> {q}")
     cur.execute(q)
-    print(f"ds.read_schema()  {ds.read_schema()}")
     out.write_schema(ds.read_schema())
 else:
     schema = []
@@ -168,10 +169,8 @@ else:
     cur.execute(q)
 
     print("[+] Create a foreign table ...")
-    q = f"""CREATE OR REPLACE FOREIGN TABLE f_{output_table} ({schema_out}) wrapper {file_formate}_fdw options 
-    (location = '{full_path}', AWS_ID = '{AWS_ACCESS_KEY}', AWS_SECRET = '{AWS_SECRET_KEY}' )"""
     q_csv = f"""CREATE OR REPLACE FOREIGN TABLE f_{output_table} ({schema_out}) wrapper {file_formate}_fdw options 
-    (location = '{full_path}', AWS_ID = '{AWS_ACCESS_KEY}', AWS_SECRET = '{AWS_SECRET_KEY}', DELIMITER  = '|' )"""
+    (location = '{full_path}', AWS_ID = '{AWS_ACCESS_KEY}', AWS_SECRET = '{AWS_SECRET_KEY}', DELIMITER  = '{separator}' )"""
     print(f"foreign table create -->> {q_csv}")
     cur.execute(q_csv)
 
@@ -183,4 +182,3 @@ else:
     # Write recipe outputs
     out.write_schema(ds.read_schema())
     print("[+] Loading Done")
-    print(ds.read_schema())
