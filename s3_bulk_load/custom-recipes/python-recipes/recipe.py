@@ -129,12 +129,12 @@ cur = cnx.cursor()
 # Building schema
 fieldSetterMap = {
     'boolean': 'BOOLEAN',
-    'tinyint': 'SMALLINT',
+    'tinyint': 'TINYINT',
     'smallint': 'SMALLINT',
     'int': 'INTEGER',
     'bigint': 'BIGINT',
     'float': 'FLOAT',
-    'double': 'FLOAT',
+    'double': 'DOUBLE',
     'date': 'DATE',
     'string': 'text',
 }
