@@ -135,7 +135,7 @@ fieldSetterMap = {
     'bigint': 'BIGINT',
     'float': 'FLOAT',
     'double': 'FLOAT',
-    'date': 'text',
+    'date': 'DATE',
     'string': 'text',
 }
 
