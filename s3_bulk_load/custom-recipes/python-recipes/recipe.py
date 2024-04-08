@@ -175,7 +175,7 @@ else:
     cur.execute(q_csv)
 
     print("[+] Loading data...")
-    q = f"""INSERT INTO {output_table} SELECT *  FROM f_{output_table} """
+    q = f"""INSERT INTO "{output_table}" SELECT *  FROM f_{output_table} """
     print(q)
     cur.execute(q)
 
