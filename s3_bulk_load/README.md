@@ -16,6 +16,15 @@ read some input data from Amazon S3 and load it to Sqreamdb table by using this 
 
 The Plugin allows DSS to create a new sqreamdb table and to perform a fast bulk load from S3 data.
 
+# How To Add Plugin
+
+1. From the Dataiku DSS Application menu, choose Plugins.
+2. Select Add plugin > Fetch from Git repository.
+3. Enter the URL of the repository.
+4. Enter s3_bulk_load at path in repository.
+
+
+
 # Prerequisites
 
 1. Sqreamdb (JDBC) Connection set up in DSS
